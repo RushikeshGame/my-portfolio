@@ -16,13 +16,13 @@
     <header>
         <nav class="navbar">
 
-            <div class="logo">
+            <a href="#home" class="logo">
                 Rushikesh Game
-            </div>
+            </a>
 
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#profile">Profile</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#internship">Internship</a></li>
@@ -40,54 +40,45 @@
 
         <div class="hero-content">
 
-            <!-- Profile Photo -->
-            <img
-                src="profile.jpg"
-                alt="Rushikesh Game"
-                class="profile-photo"
-            >
+            <img src="profile.jpg"
+                 alt="Rushikesh Game"
+                 class="profile-photo">
 
-            <p class="small-title">
-                Hello, I'm
-            </p>
+            <p class="welcome">Hello, I'm</p>
 
-            <h1>
-                Rushikesh Game
-            </h1>
+            <h1>Rushikesh Game</h1>
 
             <h2>
                 Electronics & Telecommunication Engineering Student
             </h2>
 
-            <p>
+            <p class="hero-description">
                 Third-year B.E. student interested in Embedded Systems,
                 Electronics, IoT, Automation, Software Development and AI/ML.
             </p>
 
-            <div class="buttons">
+            <div class="hero-buttons">
 
-                <a href="#projects" class="btn">
+                <a href="#projects" class="btn primary-btn">
                     View Projects
                 </a>
 
-                <a href="resume.pdf" class="btn" target="_blank">
-                    Download Resume
+                <a href="resume.pdf"
+                   target="_blank"
+                   class="btn">
+                    View Resume
                 </a>
 
-                <a
-                    href="https://www.linkedin.com/in/rushikesh-game-b11bab313"
-                    class="btn secondary-btn"
-                    target="_blank"
-                >
-                    LinkedIn
-                </a>
-
-                <a
-                    href="https://github.com/RushikeshGame"
-                    class="btn secondary-btn"
-                    target="_blank"
-                >
+                <a href="https://github.com/RushikeshGame"
+                   target="_blank"
+                   class="btn">
                     GitHub
+                </a>
+
+                <a href="https://www.linkedin.com/in/rushikesh-game-b11bab313"
+                   target="_blank"
+                   class="btn">
+                    LinkedIn
                 </a>
 
             </div>
@@ -97,58 +88,76 @@
     </section>
 
 
-    <!-- Profile -->
-    <section id="profile" class="section">
+    <!-- About -->
+    <section id="about" class="section">
 
-        <h2 class="section-title">
-            Profile
-        </h2>
+        <div class="section-heading">
 
-        <p>
-            Third-year Electronics & Telecommunication Engineering student
-            with hands-on experience across embedded systems, electronics,
-            automation, Python, Java, microcontrollers, sensors, IoT,
-            and electronic circuit design.
-        </p>
+            <p class="section-label">
+                ABOUT ME
+            </p>
 
-        <p>
-            Completed a Trainee Developer Internship at
-            iBase Electrosoft LLP, with exposure to Artificial Intelligence
-            and Machine Learning.
-        </p>
+            <h2>About Me</h2>
 
-        <p>
-            Interested in embedded/electronics, IoT, automation,
-            software development and UI/UX opportunities.
-        </p>
+        </div>
+
+        <div class="about-card">
+
+            <p>
+                I am a third-year Electronics & Telecommunication
+                Engineering student at Pravara Rural Engineering College,
+                Loni.
+            </p>
+
+            <p>
+                I have hands-on experience and learning exposure in
+                embedded systems, electronics, automation, Python, Java,
+                microcontrollers, sensors, IoT and electronic circuit design.
+            </p>
+
+            <p>
+                I have also completed a Trainee Developer Internship at
+                iBase Electrosoft LLP, where I gained exposure to
+                Artificial Intelligence and Machine Learning.
+            </p>
+
+        </div>
 
     </section>
 
 
     <!-- Education -->
-    <section id="education" class="section">
+    <section id="education" class="section light-section">
 
-        <h2 class="section-title">
-            Education
-        </h2>
+        <div class="section-heading">
 
-        <div class="card">
+            <p class="section-label">EDUCATION</p>
 
-            <h3>
-                Bachelor of Engineering (B.E.)
-            </h3>
+            <h2>My Education</h2>
 
-            <h4>
-                Electronics & Telecommunication Engineering
-            </h4>
+        </div>
 
-            <p>
-                Pravara Rural Engineering College, Loni
-            </p>
+        <div class="education-card">
 
-            <p>
-                <strong>Status:</strong> Third Year - Pursuing
-            </p>
+            <div class="card-icon">🎓</div>
+
+            <div>
+
+                <h3>Bachelor of Engineering (B.E.)</h3>
+
+                <h4>
+                    Electronics & Telecommunication Engineering
+                </h4>
+
+                <p>
+                    Pravara Rural Engineering College, Loni
+                </p>
+
+                <span>
+                    Third Year - Pursuing
+                </span>
+
+            </div>
 
         </div>
 
@@ -158,51 +167,71 @@
     <!-- Skills -->
     <section id="skills" class="section">
 
-        <h2 class="section-title">
-            Technical Skills
-        </h2>
+        <div class="section-heading">
 
-        <div class="skills-container">
+            <p class="section-label">MY SKILLS</p>
+
+            <h2>Technical Skills</h2>
+
+        </div>
+
+        <div class="skills-grid">
 
             <div class="skill-card">
+                <div class="skill-icon">💻</div>
+
                 <h3>Programming</h3>
-                <p>Python</p>
-                <p>Java</p>
-                <p>C</p>
-                <p>C++</p>
+
+                <p>
+                    Python • Java • C • C++
+                </p>
             </div>
 
+
             <div class="skill-card">
+                <div class="skill-icon">⚙️</div>
+
                 <h3>Embedded & Electronics</h3>
-                <p>Embedded Systems</p>
-                <p>Microcontrollers</p>
-                <p>Sensors</p>
-                <p>Electronic Circuit Design</p>
-                <p>Chip Design Fundamentals</p>
+
+                <p>
+                    Embedded Systems • Microcontrollers • Sensors
+                    • Electronic Circuit Design
+                </p>
             </div>
 
+
             <div class="skill-card">
+                <div class="skill-icon">🌐</div>
+
                 <h3>IoT & Automation</h3>
-                <p>IoT</p>
-                <p>Home Automation</p>
-                <p>AI Applications</p>
+
+                <p>
+                    IoT • Home Automation • AI Applications
+                </p>
             </div>
 
+
             <div class="skill-card">
+                <div class="skill-icon">🎨</div>
+
                 <h3>UI/UX Design</h3>
-                <p>UI/UX Design</p>
-                <p>Wireframing</p>
-                <p>Prototyping</p>
-                <p>Usability Testing</p>
+
+                <p>
+                    UI/UX Design • Wireframing • Prototyping
+                    • Usability Testing
+                </p>
             </div>
 
+
             <div class="skill-card">
+                <div class="skill-icon">🤖</div>
+
                 <h3>AI & Machine Learning</h3>
-                <p>Artificial Intelligence</p>
-                <p>Machine Learning</p>
-                <p>NumPy</p>
-                <p>Pandas</p>
-                <p>Matplotlib</p>
+
+                <p>
+                    Artificial Intelligence • Machine Learning
+                    • NumPy • Pandas • Matplotlib
+                </p>
             </div>
 
         </div>
@@ -211,29 +240,35 @@
 
 
     <!-- Internship -->
-    <section id="internship" class="section">
+    <section id="internship" class="section light-section">
 
-        <h2 class="section-title">
-            Internship Experience
-        </h2>
+        <div class="section-heading">
 
-        <div class="card">
+            <p class="section-label">EXPERIENCE</p>
 
-            <h3>
-                Trainee Developer Intern
-            </h3>
+            <h2>Internship</h2>
 
-            <h4>
-                iBase Electrosoft LLP
-            </h4>
+        </div>
 
-            <p>
-                <strong>
-                    31 January 2026 - 09 February 2026
-                </strong>
-            </p>
+        <div class="experience-card">
 
-            <p>
+            <div class="experience-top">
+
+                <div>
+
+                    <h3>Trainee Developer Intern</h3>
+
+                    <h4>iBase Electrosoft LLP</h4>
+
+                </div>
+
+                <span class="date">
+                    31 Jan 2026 - 09 Feb 2026
+                </span>
+
+            </div>
+
+            <p class="internship-type">
                 10-Day Internship | Remote
             </p>
 
@@ -245,22 +280,17 @@
                 </li>
 
                 <li>
-                    Learned fundamentals of AI/ML workflows including
-                    problem understanding, data handling and model concepts.
+                    Learned AI/ML workflows including problem understanding,
+                    data handling and model concepts.
                 </li>
 
                 <li>
-                    Explored Python and AI/ML concepts for solving
-                    technical problems.
+                    Explored Python and AI/ML concepts for technical
+                    problem solving.
                 </li>
 
                 <li>
                     Worked with NumPy, Pandas and Matplotlib.
-                </li>
-
-                <li>
-                    Participated in guided hands-on learning and
-                    technical training.
                 </li>
 
             </ul>
@@ -273,17 +303,22 @@
     <!-- Projects -->
     <section id="projects" class="section">
 
-        <h2 class="section-title">
-            Projects
-        </h2>
+        <div class="section-heading">
 
-        <div class="projects-container">
+            <p class="section-label">MY WORK</p>
+
+            <h2>Projects</h2>
+
+        </div>
+
+        <div class="projects-grid">
+
 
             <div class="project-card">
 
-                <h3>
-                    Car Speed Detection System
-                </h3>
+                <div class="project-number">01</div>
+
+                <h3>Car Speed Detection System</h3>
 
                 <p>
                     Developed a system for detecting and monitoring
@@ -295,18 +330,19 @@
                     speed-related data and generate real-time output.
                 </p>
 
-                <span>
-                    Embedded Systems | Sensors
-                </span>
+                <div class="project-tags">
+                    <span>Embedded Systems</span>
+                    <span>Sensors</span>
+                </div>
 
             </div>
 
 
             <div class="project-card">
 
-                <h3>
-                    Water Level Monitoring System
-                </h3>
+                <div class="project-number">02</div>
+
+                <h3>Water Level Monitoring System</h3>
 
                 <p>
                     Developed a sensor-based system to monitor water
@@ -318,33 +354,36 @@
                     water-level changes and provide monitoring output.
                 </p>
 
-                <span>
-                    Sensors | Microcontroller | Embedded Systems
-                </span>
+                <div class="project-tags">
+                    <span>Sensors</span>
+                    <span>Microcontroller</span>
+                    <span>Embedded</span>
+                </div>
 
             </div>
 
 
             <div class="project-card">
 
-                <h3>
-                    Inventory Management System
-                </h3>
+                <div class="project-number">03</div>
+
+                <h3>Inventory Management System</h3>
 
                 <p>
                     Developed a Java-based application to manage
-                    inventory records and related operations.
+                    inventory records.
                 </p>
 
                 <p>
                     Used JDBC for database connectivity and implemented
-                    application logic for adding, updating and managing
-                    inventory information.
+                    application logic for managing inventory information.
                 </p>
 
-                <span>
-                    Java | JDBC | Database
-                </span>
+                <div class="project-tags">
+                    <span>Java</span>
+                    <span>JDBC</span>
+                    <span>Database</span>
+                </div>
 
             </div>
 
@@ -354,61 +393,54 @@
 
 
     <!-- Certificates -->
-    <section id="certificates" class="section">
+    <section id="certificates" class="section light-section">
 
-        <h2 class="section-title">
-            Certificates
-        </h2>
+        <div class="section-heading">
 
-        <div class="certificates-container">
+            <p class="section-label">ACHIEVEMENTS</p>
+
+            <h2>Certificates</h2>
+
+        </div>
+
+        <div class="certificates-grid">
+
 
             <div class="certificate-card">
 
-                <h3>
-                    AI & ML Internship Certificate
-                </h3>
+                <div class="certificate-icon">📜</div>
 
-                <p>
-                    iBase Electrosoft LLP
-                </p>
+                <h3>AI & ML Internship Certificate</h3>
 
-                <p>
-                    2026
-                </p>
+                <p>iBase Electrosoft LLP</p>
+
+                <span>2026</span>
 
             </div>
 
 
             <div class="certificate-card">
 
-                <h3>
-                    C Training
-                </h3>
+                <div class="certificate-icon">📜</div>
 
-                <p>
-                    EduPyramids, SINE, IIT Bombay
-                </p>
+                <h3>C Training</h3>
 
-                <p>
-                    Score: 85%
-                </p>
+                <p>EduPyramids, SINE, IIT Bombay</p>
+
+                <span>Score: 85%</span>
 
             </div>
 
 
             <div class="certificate-card">
 
-                <h3>
-                    UAS/Drone Technology Bootcamp
-                </h3>
+                <div class="certificate-icon">🚁</div>
 
-                <p>
-                    C-DAC, Pune
-                </p>
+                <h3>UAS/Drone Technology Bootcamp</h3>
 
-                <p>
-                    2026
-                </p>
+                <p>C-DAC, Pune</p>
+
+                <span>2026</span>
 
             </div>
 
@@ -417,11 +449,115 @@
     </section>
 
 
-    <!-- Core Strengths -->
-    <section class="section">
+    <!-- Resume -->
+    <section class="resume-section">
 
-        <h2 class="section-title">
-            Core Strengths
-        </h2>
+        <div class="resume-content">
 
-        <div
+            <p class="section-label">RESUME</p>
+
+            <h2>Interested in working together?</h2>
+
+            <p>
+                View my resume to learn more about my education,
+                skills, experience and projects.
+            </p>
+
+            <a href="resume.pdf"
+               target="_blank"
+               class="resume-btn">
+                View My Resume
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+
+        <div class="section-heading">
+
+            <p class="section-label">GET IN TOUCH</p>
+
+            <h2>Contact Me</h2>
+
+        </div>
+
+        <div class="contact-grid">
+
+
+            <a href="mailto:rushikeshgame951@gmail.com"
+               class="contact-card">
+
+                <span>📧</span>
+
+                <div>
+                    <h3>Email</h3>
+                    <p>rushikeshgame951@gmail.com</p>
+                </div>
+
+            </a>
+
+
+            <a href="tel:+919518329296"
+               class="contact-card">
+
+                <span>📞</span>
+
+                <div>
+                    <h3>Phone</h3>
+                    <p>+91 95183 29296</p>
+                </div>
+
+            </a>
+
+
+            <a href="https://www.linkedin.com/in/rushikesh-game-b11bab313"
+               target="_blank"
+               class="contact-card">
+
+                <span>💼</span>
+
+                <div>
+                    <h3>LinkedIn</h3>
+                    <p>View LinkedIn Profile</p>
+                </div>
+
+            </a>
+
+
+            <a href="https://github.com/RushikeshGame"
+               target="_blank"
+               class="contact-card">
+
+                <span>💻</span>
+
+                <div>
+                    <h3>GitHub</h3>
+                    <p>View GitHub Profile</p>
+                </div>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 Rushikesh Game</p>
+
+        <p>
+            Electronics & Telecommunication Engineering
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
