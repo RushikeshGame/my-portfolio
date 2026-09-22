@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>Rushikesh Game | Electronics & Embedded Systems Portfolio</title>
 
-    <title>Rushikesh Game | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 
+    <!-- Font Awesome -->
     <link rel="stylesheet"
-          href="style.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <!-- Devicon -->
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
-
 
 <body>
 
@@ -25,8 +23,7 @@
     <div class="cursor-dot" data-cursor-dot></div>
     <div class="cursor-outline" data-cursor-outline></div>
 
-
-    <!-- Star Background -->
+    <!-- Animated Stars -->
     <div id="stars"></div>
     <div id="stars2"></div>
     <div id="stars3"></div>
@@ -35,113 +32,69 @@
     <!-- ================= HEADER ================= -->
 
     <header>
-
-        <nav>
+        <nav class="navbar">
 
             <div class="logo">
-                Rushikesh<span>.</span>
+                Rushikesh<span>.dev</span>
             </div>
 
-
-            <ul>
-
+            <ul class="nav-links">
                 <li>
-                    <a href="#hero" class="active">
-                        Home
-                    </a>
+                    <a href="#home" class="active">Home</a>
                 </li>
 
                 <li>
-                    <a href="#about">
-                        About
-                    </a>
+                    <a href="#about">About</a>
                 </li>
 
                 <li>
-                    <a href="#education">
-                        Education
-                    </a>
+                    <a href="#experience">Experience</a>
                 </li>
 
                 <li>
-                    <a href="#skills">
-                        Skills
-                    </a>
+                    <a href="#projects">Projects</a>
                 </li>
 
                 <li>
-                    <a href="#experience">
-                        Internship
-                    </a>
+                    <a href="#achievements">Achievements</a>
                 </li>
 
                 <li>
-                    <a href="#projects">
-                        Projects
-                    </a>
+                    <a href="#skills">Skills</a>
                 </li>
 
                 <li>
-                    <a href="#achievements">
-                        Certificates
-                    </a>
+                    <a href="#contact">Contact</a>
                 </li>
-
-                <li>
-                    <a href="#contact">
-                        Contact
-                    </a>
-                </li>
-
             </ul>
 
         </nav>
-
     </header>
 
 
     <!-- ================= HERO ================= -->
 
-    <section id="hero">
+    <section id="home" class="hero">
 
         <div class="hero-content">
 
-            <h3>
+            <p class="hero-greeting">
                 Hello, I'm
-            </h3>
+            </p>
 
-
-            <h1>
-                Rushikesh
-                <span class="gradient-text">
-                    Game
-                </span>
+            <h1 class="gradient-text">
+                Rushikesh Game
             </h1>
 
-
             <h2>
-                Electronics & Telecommunication
-                Engineering Student
+                <span class="typing-text"></span>
             </h2>
 
-
-            <p class="hero-subtitle">
-
-                Passionate about
-                <span class="typing-text"></span>
-
+            <p class="hero-description">
+                Third-year Electronics & Telecommunication Engineering student
+                with hands-on experience across embedded systems, electronics,
+                automation, software development and VLSI fundamentals.
             </p>
-
-
-            <p class="hero-subtitle">
-
-                Third-year Electronics & Telecommunication
-                Engineering student with hands-on exposure to
-                Embedded Systems, Electronics, IoT, Automation,
-                Software Development and UI/UX.
-
-            </p>
-
 
             <!-- Social Links -->
 
@@ -150,54 +103,30 @@
                 <a href="https://github.com/RushikeshGame"
                    target="_blank"
                    aria-label="GitHub">
-
-                    <i class="fa-brands fa-github"></i>
-
+                    <i class="fab fa-github"></i>
                 </a>
-
 
                 <a href="https://www.linkedin.com/in/rushikesh-game-b11bab313"
                    target="_blank"
                    aria-label="LinkedIn">
-
-                    <i class="fa-brands fa-linkedin"></i>
-
+                    <i class="fab fa-linkedin-in"></i>
                 </a>
-
 
                 <a href="mailto:rushikeshgame951@gmail.com"
                    aria-label="Email">
-
-                    <i class="fa-solid fa-envelope"></i>
-
+                    <i class="fas fa-envelope"></i>
                 </a>
 
             </div>
 
+            <!-- Resume -->
 
-            <!-- Buttons -->
-
-            <div class="hero-buttons">
-
-                <a href="#projects"
-                   class="cta-button">
-
-                    View Projects
-
-                </a>
-
-
-                <a href="resume.pdf"
-                   target="_blank"
-                   class="cta-button">
-
-                    <i class="fa-solid fa-file-pdf"></i>
-
-                    View Resume
-
-                </a>
-
-            </div>
+            <a href="resume.pdf"
+               class="cta-button"
+               download>
+                <i class="fas fa-download"></i>
+                Download CV
+            </a>
 
         </div>
 
@@ -206,7 +135,7 @@
 
         <div class="hero-image">
 
-            <div class="image-wrapper">
+            <div class="hero-image-wrapper">
 
                 <img src="profile.jpg"
                      alt="Rushikesh Game">
@@ -218,181 +147,92 @@
     </section>
 
 
-
     <!-- ================= ABOUT ================= -->
 
-    <section id="about">
+    <section id="about" class="section">
 
-        <h2>
-            About Me
-        </h2>
+        <div class="section-title">
 
+            <span>ABOUT ME</span>
 
-        <p class="section-subtitle">
+            <h2>
+                Passionate About
+                <span class="gradient-text">Technology</span>
+            </h2>
 
-            Engineering student focused on
-            technology, development and innovation.
-
-        </p>
+        </div>
 
 
         <div class="about-container">
 
-
-            <div class="about-narrative">
+            <div class="about-content">
 
                 <p>
-
-                    I am a third-year Electronics &
-                    Telecommunication Engineering student
-                    at Pravara Rural Engineering College, Loni.
-
+                    I am a third-year Electronics & Telecommunication Engineering
+                    student at Pravara Rural Engineering College, Loni.
                 </p>
 
-
                 <p>
-
-                    I have hands-on exposure to Embedded Systems,
-                    Electronics, Microcontrollers, Sensors, IoT,
-                    Automation, Python, Java and Electronic
-                    Circuit Design.
-
+                    I have an interest in embedded systems, electronics,
+                    software development, IoT, automation and VLSI design.
+                    I enjoy learning how hardware and software work together
+                    to build practical solutions.
                 </p>
 
-
                 <p>
-
-                    I enjoy combining hardware and software
-                    to develop practical technology solutions
-                    and continuously improve my technical skills
-                    through projects and hands-on learning.
-
-                </p>
-
-
-                <p>
-
-                    I am exploring opportunities in Embedded
-                    Systems, IoT, Automation, Software Development
-                    and UI/UX Design.
-
+                    I am continuously developing my technical skills through
+                    academic projects, practical learning and internship
+                    experience.
                 </p>
 
             </div>
 
 
-            <div class="about-principles">
-
+            <div class="principles-grid">
 
                 <div class="principle-card">
-
-                    <div class="principle-icon">
-
-                        <i class="fa-solid fa-microchip"></i>
-
-                    </div>
-
-                    <div class="principle-text">
-
-                        <h4>
-                            Embedded & Electronics
-                        </h4>
-
-                        <p>
-
-                            Interested in microcontrollers,
-                            sensors, electronic circuits and
-                            embedded applications.
-
-                        </p>
-
-                    </div>
-
+                    <i class="fas fa-microchip"></i>
+                    <h3>Electronics</h3>
+                    <p>
+                        Electronics and circuit design fundamentals.
+                    </p>
                 </div>
 
 
-
                 <div class="principle-card">
-
-                    <div class="principle-icon">
-
-                        <i class="fa-solid fa-code"></i>
-
-                    </div>
-
-                    <div class="principle-text">
-
-                        <h4>
-                            Software Development
-                        </h4>
-
-                        <p>
-
-                            Building programming fundamentals
-                            using C, C++, Python and Java.
-
-                        </p>
-
-                    </div>
-
+                    <i class="fas fa-code"></i>
+                    <h3>Software</h3>
+                    <p>
+                        Programming and software development.
+                    </p>
                 </div>
 
 
-
                 <div class="principle-card">
-
-                    <div class="principle-icon">
-
-                        <i class="fa-solid fa-wifi"></i>
-
-                    </div>
-
-                    <div class="principle-text">
-
-                        <h4>
-                            IoT & Automation
-                        </h4>
-
-                        <p>
-
-                            Exploring connected devices,
-                            automation and practical
-                            IoT solutions.
-
-                        </p>
-
-                    </div>
-
+                    <i class="fas fa-microchip"></i>
+                    <h3>Embedded</h3>
+                    <p>
+                        Embedded systems and microcontroller concepts.
+                    </p>
                 </div>
 
 
-
                 <div class="principle-card">
-
-                    <div class="principle-icon">
-
-                        <i class="fa-solid fa-lightbulb"></i>
-
-                    </div>
-
-                    <div class="principle-text">
-
-                        <h4>
-                            Continuous Learning
-                        </h4>
-
-                        <p>
-
-                            Improving technical skills through
-                            projects, internships and technical
-                            training.
-
-                        </p>
-
-                    </div>
-
+                    <i class="fas fa-network-wired"></i>
+                    <h3>IoT & Automation</h3>
+                    <p>
+                        Connected systems and automation applications.
+                    </p>
                 </div>
 
+
+                <div class="principle-card">
+                    <i class="fas fa-memory"></i>
+                    <h3>VLSI</h3>
+                    <p>
+                        VLSI design and semiconductor fundamentals.
+                    </p>
+                </div>
 
             </div>
 
@@ -401,532 +241,279 @@
     </section>
 
 
+    <!-- ================= EXPERIENCE ================= -->
 
-    <!-- ================= EDUCATION ================= -->
+    <section id="experience" class="section">
 
-    <section id="education">
+        <div class="section-title">
 
-        <h2>
-            Education
-        </h2>
+            <span>WORK EXPERIENCE</span>
 
+            <h2>
+                My <span class="gradient-text">Experience</span>
+            </h2>
 
-        <p class="section-subtitle">
-
-            My academic journey
-
-        </p>
+        </div>
 
 
         <div class="timeline">
-
 
             <div class="timeline-item">
 
                 <div class="timeline-dot"></div>
 
-
                 <div class="timeline-content">
 
-                    <h3>
+                    <div class="experience-header">
 
-                        B.E. – Electronics &
-                        Telecommunication Engineering
+                        <div>
 
-                    </h3>
+                            <h3>
+                                Trainee Developer Intern
+                            </h3>
+
+                            <h4>
+                                iBase Electrosoft LLP
+                            </h4>
+
+                        </div>
+
+                        <span class="experience-date">
+                            31 Jan 2026 – 09 Feb 2026
+                        </span>
+
+                    </div>
 
 
-                    <p>
-
-                        Pravara Rural Engineering College, Loni
-
+                    <p class="experience-location">
+                        <i class="fas fa-location-dot"></i>
+                        Remote
                     </p>
 
 
-                    <p>
+                    <ul>
 
-                        Third Year – Pursuing
+                        <li>
+                            Gained practical exposure to Artificial Intelligence
+                            and Machine Learning concepts and applications.
+                        </li>
 
-                    </p>
+                        <li>
+                            Explored Python-based AI/ML workflows and
+                            technical problem solving.
+                        </li>
+
+                        <li>
+                            Worked with NumPy, Pandas and Matplotlib
+                            during hands-on learning.
+                        </li>
+
+                        <li>
+                            Gained exposure to real-world technical
+                            development practices through guided training.
+                        </li>
+
+                    </ul>
 
                 </div>
 
             </div>
-
 
         </div>
 
     </section>
 
 
+    <!-- ================= EDUCATION ================= -->
 
-    <!-- ================= SKILLS ================= -->
+    <section id="education" class="section">
 
-    <section id="skills">
+        <div class="section-title">
 
-        <div class="skills-container">
+            <span>EDUCATION</span>
 
             <h2>
-                Technical Skills
+                My <span class="gradient-text">Education</span>
             </h2>
 
-
-            <p class="section-subtitle">
-
-                Technologies and skills I am developing
-
-            </p>
-
-
-            <div class="skills-grid">
-
-
-                <!-- Python -->
-
-                <div class="skill-card">
-
-                    <div class="skill-card-inner">
-
-                        <div class="skill-card-front">
-
-                            <i class="fa-brands fa-python"></i>
-
-                            <span>
-                                Python
-                            </span>
-
-                        </div>
-
-
-                        <div class="skill-card-back">
-
-                            <h3>
-                                Python
-                            </h3>
-
-                            <p class="experience-text">
-
-                                Programming, data handling
-                                and AI/ML fundamentals.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Java -->
-
-                <div class="skill-card">
-
-                    <div class="skill-card-inner">
-
-                        <div class="skill-card-front">
-
-                            <i class="fa-brands fa-java"></i>
-
-                            <span>
-                                Java
-                            </span>
-
-                        </div>
-
-
-                        <div class="skill-card-back">
-
-                            <h3>
-                                Java
-                            </h3>
-
-                            <p class="experience-text">
-
-                                Object-oriented programming
-                                and application development.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- C / C++ -->
-
-                <div class="skill-card">
-
-                    <div class="skill-card-inner">
-
-                        <div class="skill-card-front">
-
-                            <i class="fa-solid fa-c"></i>
-
-                            <span>
-                                C / C++
-                            </span>
-
-                        </div>
-
-
-                        <div class="skill-card-back">
-
-                            <h3>
-                                C / C++
-                            </h3>
-
-                            <p class="experience-text">
-
-                                Programming fundamentals
-                                and embedded development.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Embedded -->
-
-                <div class="skill-card">
-
-                    <div class="skill-card-inner">
-
-                        <div class="skill-card-front">
-
-                            <i class="fa-solid fa-microchip"></i>
-
-                            <span>
-                                Embedded Systems
-                            </span>
-
-                        </div>
-
-
-                        <div class="skill-card-back">
-
-                            <h3>
-                                Embedded Systems
-                            </h3>
-
-                            <p class="experience-text">
-
-                                Microcontrollers, sensors
-                                and hardware-software integration.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- IoT -->
-
-                <div class="skill-card">
-
-                    <div class="skill-card-inner">
-
-                        <div class="skill-card-front">
-
-                            <i class="fa-solid fa-wifi"></i>
-
-                            <span>
-                                IoT
-                            </span>
-
-                        </div>
-
-
-                        <div class="skill-card-back">
-
-                            <h3>
-                                IoT
-                            </h3>
-
-                            <p class="experience-text">
-
-                                Connected devices, monitoring
-                                and automation concepts.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Electronics -->
-
-                <div class="skill-card">
-
-                    <div class="skill-card-inner">
-
-                        <div class="skill-card-front">
-
-                            <i class="fa-solid fa-bolt"></i>
-
-                            <span>
-                                Electronics
-                            </span>
-
-                        </div>
-
-
-                        <div class="skill-card-back">
-
-                            <h3>
-                                Electronics
-                            </h3>
-
-                            <p class="experience-text">
-
-                                Electronic circuit design
-                                and practical electronics.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- AI ML -->
-
-                <div class="skill-card">
-
-                    <div class="skill-card-inner">
-
-                        <div class="skill-card-front">
-
-                            <i class="fa-solid fa-brain"></i>
-
-                            <span>
-                                AI / ML
-                            </span>
-
-                        </div>
-
-
-                        <div class="skill-card-back">
-
-                            <h3>
-                                AI / ML
-                            </h3>
-
-                            <p class="experience-text">
-
-                                Artificial Intelligence,
-                                Machine Learning, NumPy,
-                                Pandas and Matplotlib.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- UI UX -->
-
-                <div class="skill-card">
-
-                    <div class="skill-card-inner">
-
-                        <div class="skill-card-front">
-
-                            <i class="fa-solid fa-pen-ruler"></i>
-
-                            <span>
-                                UI / UX
-                            </span>
-
-                        </div>
-
-
-                        <div class="skill-card-back">
-
-                            <h3>
-                                UI / UX Design
-                            </h3>
-
-                            <p class="experience-text">
-
-                                Wireframing, prototyping
-                                and usability concepts.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
         </div>
 
-    </section>
-        <!-- ================= INTERNSHIP ================= -->
 
-    <section id="experience">
-
-        <h2>
-            Internship Experience
-        </h2>
-
-        <p class="section-subtitle">
-            Practical learning and industry exposure
-        </p>
+        <div class="education-timeline">
 
 
-        <div class="timeline-content">
+            <!-- B.E. -->
 
-            <div class="experience-header">
+            <div class="education-item">
 
-                <div class="experience-title">
+                <div class="education-dot"></div>
+
+                <div class="education-content">
+
+                    <span class="education-year">
+                        2024 – 2028
+                    </span>
 
                     <h3>
-                        Trainee Developer Intern
+                        B.E. – Electronics & Telecommunication Engineering
                     </h3>
 
-                    <p>
-                        iBase Electrosoft LLP
-                    </p>
+                    <h4>
+                        Pravara Rural Engineering College, Loni
+                    </h4>
 
                     <p>
-                        31 January 2026 – 09 February 2026 · Remote
+                        Currently pursuing third-year engineering.
                     </p>
+
+                    <span class="education-status">
+                        Pursuing
+                    </span>
 
                 </div>
 
             </div>
 
 
-            <ul class="experience-details">
+            <!-- 12th -->
 
-                <li>
-                    Gained practical exposure to Artificial Intelligence
-                    and Machine Learning concepts.
-                </li>
+            <div class="education-item">
 
-                <li>
-                    Explored Python-based approaches for technical
-                    problem solving and application development.
-                </li>
+                <div class="education-dot"></div>
 
-                <li>
-                    Worked with NumPy, Pandas and Matplotlib for
-                    data handling and visualization.
-                </li>
+                <div class="education-content">
 
-                <li>
-                    Learned AI/ML workflows including problem understanding,
-                    data handling and model concepts.
-                </li>
+                    <span class="education-year">
+                        2024
+                    </span>
 
-                <li>
-                    Participated in guided hands-on technical learning
-                    and application-oriented activities.
-                </li>
+                    <h3>
+                        Higher Secondary Certificate – 12th
+                    </h3>
 
-            </ul>
+                    <h4>
+                        Shri Shivaji Junior Arts and Science College,
+                        Bodhegaon
+                    </h4>
+
+                    <p>
+                        Maharashtra State Board
+                    </p>
+
+                    <span class="education-percentage">
+                        76.00%
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- 10th -->
+
+            <div class="education-item">
+
+                <div class="education-dot"></div>
+
+                <div class="education-content">
+
+                    <span class="education-year">
+                        2022
+                    </span>
+
+                    <h3>
+                        Secondary School Certificate – 10th
+                    </h3>
+
+                    <h4>
+                        Shri Shivaji High School, Bodhegaon
+                    </h4>
+
+                    <p>
+                        Maharashtra State Board
+                    </p>
+
+                    <span class="education-percentage">
+                        85.40%
+                    </span>
+
+                </div>
+
+            </div>
 
         </div>
 
     </section>
-
 
 
     <!-- ================= PROJECTS ================= -->
 
-    <section id="projects">
+    <section id="projects" class="section">
 
-        <h2>
-            Projects
-        </h2>
+        <div class="section-title">
 
-        <p class="section-subtitle">
-            Practical projects and technical applications
-        </p>
+            <span>PROJECTS</span>
+
+            <h2>
+                My <span class="gradient-text">Projects</span>
+            </h2>
+
+        </div>
 
 
-        <div class="project-grid">
+        <div class="projects-grid">
 
 
             <!-- Project 1 -->
 
             <div class="project-card">
 
-                <div class="project-image-container">
+                <div class="project-image">
 
-                    <i class="fa-solid fa-car"
-                       style="font-size:100px;
-                              display:flex;
-                              justify-content:center;
-                              align-items:center;
-                              height:100%;
-                              color:#E50914;">
-                    </i>
+                    <img src="car-speed-detection.png"
+                         alt="Car Speed Detection System">
 
                 </div>
 
-
                 <div class="project-content">
 
-                    <span class="project-category">
-                        Embedded Systems
-                    </span>
-
+                    <div class="project-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
 
                     <h3>
                         Car Speed Detection System
                     </h3>
 
-
-                    <p class="project-description">
-
-                        A sensor-based system designed to detect
-                        vehicle speed-related information and provide
-                        real-time monitoring output using
-                        embedded-system concepts.
-
+                    <p>
+                        A sensor-based embedded system developed to
+                        detect vehicles and monitor speed-related output
+                        using an IR sensor and Arduino.
                     </p>
 
+                    <div class="project-tags">
 
-                    <ul class="project-tech-list">
+                        <span>Arduino</span>
+                        <span>IR Sensor</span>
+                        <span>Embedded Systems</span>
+
+                    </div>
+
+                    <ul class="project-features">
 
                         <li>
-                            <i class="fa-solid fa-microchip"></i>
-                            Embedded Systems
+                            <i class="fas fa-check"></i>
+                            Vehicle detection using IR sensor
                         </li>
 
                         <li>
-                            <i class="fa-solid fa-gauge-high"></i>
-                            Sensors
+                            <i class="fas fa-check"></i>
+                            Arduino-based control
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Real-time monitoring concept
                         </li>
 
                     </ul>
@@ -934,58 +521,58 @@
                 </div>
 
             </div>
-
 
 
             <!-- Project 2 -->
 
             <div class="project-card">
 
-                <div class="project-image-container">
+                <div class="project-image">
 
-                    <i class="fa-solid fa-droplet"
-                       style="font-size:100px;
-                              display:flex;
-                              justify-content:center;
-                              align-items:center;
-                              height:100%;
-                              color:#E50914;">
-                    </i>
+                    <img src="water-level-monitoring.png"
+                         alt="Water Level Monitoring System">
 
                 </div>
 
-
                 <div class="project-content">
 
-                    <span class="project-category">
-                        IoT / Embedded
-                    </span>
-
+                    <div class="project-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
 
                     <h3>
                         Water Level Monitoring System
                     </h3>
 
-
-                    <p class="project-description">
-
-                        A sensor-based monitoring system designed
-                        to monitor water level in real time with
-                        microcontroller integration and monitoring output.
-
+                    <p>
+                        A sensor-based system designed for real-time
+                        water-level monitoring and practical application
+                        of embedded-system concepts.
                     </p>
 
+                    <div class="project-tags">
 
-                    <ul class="project-tech-list">
+                        <span>Embedded Systems</span>
+                        <span>Sensors</span>
+                        <span>Monitoring</span>
+
+                    </div>
+
+                    <ul class="project-features">
 
                         <li>
-                            <i class="fa-solid fa-microchip"></i>
-                            Microcontroller
+                            <i class="fas fa-check"></i>
+                            Real-time water-level monitoring
                         </li>
 
                         <li>
-                            <i class="fa-solid fa-water"></i>
-                            Sensor
+                            <i class="fas fa-check"></i>
+                            Sensor-based detection
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Practical embedded-system application
                         </li>
 
                     </ul>
@@ -993,59 +580,58 @@
                 </div>
 
             </div>
-
 
 
             <!-- Project 3 -->
 
             <div class="project-card">
 
-                <div class="project-image-container">
+                <div class="project-image">
 
-                    <i class="fa-solid fa-boxes-stacked"
-                       style="font-size:100px;
-                              display:flex;
-                              justify-content:center;
-                              align-items:center;
-                              height:100%;
-                              color:#E50914;">
-                    </i>
+                    <img src="inventory-management.png"
+                         alt="Inventory Management System">
 
                 </div>
 
-
                 <div class="project-content">
 
-                    <span class="project-category">
-                        Java Development
-                    </span>
-
+                    <div class="project-icon">
+                        <i class="fas fa-boxes-stacked"></i>
+                    </div>
 
                     <h3>
                         Inventory Management System
                     </h3>
 
-
-                    <p class="project-description">
-
-                        A Java-based application for managing inventory
-                        records with database connectivity using JDBC.
-                        The system supports adding, updating and managing
-                        inventory information.
-
+                    <p>
+                        A Java-based inventory management application
+                        developed using JDBC for database connectivity
+                        and management of inventory records.
                     </p>
 
+                    <div class="project-tags">
 
-                    <ul class="project-tech-list">
+                        <span>Java</span>
+                        <span>JDBC</span>
+                        <span>Database</span>
+
+                    </div>
+
+                    <ul class="project-features">
 
                         <li>
-                            <i class="fa-brands fa-java"></i>
-                            Java
+                            <i class="fas fa-check"></i>
+                            Add and manage inventory records
                         </li>
 
                         <li>
-                            <i class="fa-solid fa-database"></i>
-                            JDBC
+                            <i class="fas fa-check"></i>
+                            Update inventory information
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Java database connectivity using JDBC
                         </li>
 
                     </ul>
@@ -1054,402 +640,560 @@
 
             </div>
 
-
         </div>
 
     </section>
 
 
+    <!-- ================= ACHIEVEMENTS ================= -->
 
-    <!-- ================= CERTIFICATES ================= -->
+    <section id="achievements" class="section">
 
-    <section id="achievements">
+        <div class="section-title">
 
-        <h2>
-            Certificates
-        </h2>
+            <span>ACHIEVEMENTS & CERTIFICATIONS</span>
 
-        <p class="section-subtitle">
-            Certifications and technical training
-        </p>
+            <h2>
+                My <span class="gradient-text">Certifications</span>
+            </h2>
+
+        </div>
 
 
         <div class="certificate-carousel">
 
 
-            <div class="certificate-container">
+            <!-- Certificate 1 -->
+
+            <div class="certificate-card hidden">
+
+                <div class="card-inner">
+
+                    <div class="card-front">
+
+                        <i class="fas fa-certificate"></i>
+
+                        <h3>
+                            AI & ML Internship
+                        </h3>
+
+                        <p>
+                            iBase Electrosoft LLP
+                        </p>
+
+                        <span>
+                            2026
+                        </span>
+
+                    </div>
 
 
-                <!-- Certificate 1 -->
+                    <div class="card-back">
 
-                <div class="certificate-card">
-
-                    <div class="card-inner">
-
-
-                        <div class="card-front">
-
-                            <i class="fa-solid fa-certificate"
-                               style="font-size:60px;
-                                      color:#E50914;">
-                            </i>
-
-
-                            <h3>
-                                AI & ML Internship
-                            </h3>
-
-                        </div>
-
-
-                        <div class="card-back">
-
-                            <h3>
-                                AI & ML Internship Certificate
-                            </h3>
-
-
-                            <p>
-                                iBase Electrosoft LLP · 2026
-                            </p>
-
-                        </div>
+                        <img src="ai-ml-internship-certificate.jpg"
+                             alt="AI and ML Internship Certificate">
 
                     </div>
 
                 </div>
-
-
-
-                <!-- Certificate 2 -->
-
-                <div class="certificate-card">
-
-                    <div class="card-inner">
-
-
-                        <div class="card-front">
-
-                            <i class="fa-solid fa-code"
-                               style="font-size:60px;
-                                      color:#E50914;">
-                            </i>
-
-
-                            <h3>
-                                C Training
-                            </h3>
-
-                        </div>
-
-
-                        <div class="card-back">
-
-                            <h3>
-                                C Training
-                            </h3>
-
-
-                            <p>
-                                EduPyramids · SINE · IIT Bombay
-                            </p>
-
-
-                            <p>
-                                Score: 85%
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Certificate 3 -->
-
-                <div class="certificate-card">
-
-                    <div class="card-inner">
-
-
-                        <div class="card-front">
-
-                            <i class="fa-solid fa-plane"
-                               style="font-size:60px;
-                                      color:#E50914;">
-                            </i>
-
-
-                            <h3>
-                                UAS / Drone Technology
-                            </h3>
-
-                        </div>
-
-
-                        <div class="card-back">
-
-                            <h3>
-                                UAS / Drone Technology Bootcamp
-                            </h3>
-
-
-                            <p>
-                                C-DAC, Pune · 2026
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
 
             </div>
 
 
-            <!-- Certificate Controls -->
+            <!-- Certificate 2 -->
 
-            <div class="carousel-controls">
+            <div class="certificate-card hidden">
 
-                <button id="prev-btn"
-                        aria-label="Previous certificate">
+                <div class="card-inner">
 
-                    <i class="fa-solid fa-chevron-left"></i>
+                    <div class="card-front">
 
-                </button>
+                        <i class="fas fa-code"></i>
+
+                        <h3>
+                            C Programming Training
+                        </h3>
+
+                        <p>
+                            EduPyramids, SINE, IIT Bombay
+                        </p>
+
+                        <span>
+                            Score: 85%
+                        </span>
+
+                    </div>
 
 
-                <div class="scroll-dots"></div>
+                    <div class="card-back">
 
+                        <img src="c-programming-training-certificate.jpg"
+                             alt="C Programming Training Certificate">
 
-                <button id="next-btn"
-                        aria-label="Next certificate">
+                    </div>
 
-                    <i class="fa-solid fa-chevron-right"></i>
-
-                </button>
+                </div>
 
             </div>
 
+
+            <!-- Certificate 3 -->
+
+            <div class="certificate-card hidden">
+
+                <div class="card-inner">
+
+                    <div class="card-front">
+
+                        <i class="fas fa-drone"></i>
+
+                        <h3>
+                            UAS / Drone Technology Bootcamp
+                        </h3>
+
+                        <p>
+                            C-DAC, Pune
+                        </p>
+
+                        <span>
+                            2026
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-back">
+
+                        <img src="uas-drone-technology-certificate.jpg"
+                             alt="UAS Drone Technology Certificate">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Carousel Controls -->
+
+        <div class="carousel-controls">
+
+            <button class="carousel-prev"
+                    aria-label="Previous certificate">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="carousel-dots"></div>
+
+            <button class="carousel-next"
+                    aria-label="Next certificate">
+                <i class="fas fa-chevron-right"></i>
+            </button>
 
         </div>
 
     </section>
-        <!-- ================= RESUME ================= -->
 
-    <section id="resume">
 
-        <h2>
-            My Resume
-        </h2>
+<!-- ==================== SKILLS SECTION ==================== -->
+<section id="skills" class="section">
+    <div class="section-title">
+        <h2>My <span class="gradient-text">Skills</span></h2>
+        <p>Technologies and skills I am learning and developing.</p>
+    </div>
 
-        <p class="section-subtitle">
+    <div class="skills-grid">
 
-            View my complete academic and professional profile.
+        <!-- Programming -->
+        <div class="skill-card">
+            <div class="skill-card-inner">
 
+                <div class="skill-card-front">
+                    <i class="fas fa-code"></i>
+                    <h3>Programming</h3>
+                    <p>Python, Java, C, C++</p>
+                </div>
+
+                <div class="skill-card-back">
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>C</li>
+                        <li>C++</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Embedded & Electronics -->
+        <div class="skill-card">
+            <div class="skill-card-inner">
+
+                <div class="skill-card-front">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Embedded &amp; Electronics</h3>
+                    <p>Embedded Systems, Microcontrollers, Sensors</p>
+                </div>
+
+                <div class="skill-card-back">
+                    <h3>Embedded &amp; Electronics</h3>
+                    <ul>
+                        <li>Embedded Systems</li>
+                        <li>Microcontrollers</li>
+                        <li>Sensors</li>
+                        <li>Electronic Circuit Design</li>
+                        <li>Chip Design Fundamentals</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- IoT & Automation -->
+        <div class="skill-card">
+            <div class="skill-card-inner">
+
+                <div class="skill-card-front">
+                    <i class="fas fa-wifi"></i>
+                    <h3>IoT &amp; Automation</h3>
+                    <p>IoT, Automation, AI Applications</p>
+                </div>
+
+                <div class="skill-card-back">
+                    <h3>IoT &amp; Automation</h3>
+                    <ul>
+                        <li>IoT</li>
+                        <li>Home Automation</li>
+                        <li>Automation</li>
+                        <li>AI Applications</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- VLSI & Semiconductor -->
+        <div class="skill-card">
+            <div class="skill-card-inner">
+
+                <div class="skill-card-front">
+                    <i class="fas fa-memory"></i>
+                    <h3>VLSI &amp; Semiconductor</h3>
+                    <p>VLSI Design &amp; Semiconductor Fundamentals</p>
+                </div>
+
+                <div class="skill-card-back">
+                    <h3>VLSI &amp; Semiconductor</h3>
+                    <ul>
+                        <li>VLSI Design Fundamentals</li>
+                        <li>Digital Electronics</li>
+                        <li>Semiconductor Fundamentals</li>
+                        <li>Chip Design Fundamentals</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- AI & ML -->
+        <div class="skill-card">
+            <div class="skill-card-inner">
+
+                <div class="skill-card-front">
+                    <i class="fas fa-brain"></i>
+                    <h3>AI &amp; Machine Learning</h3>
+                    <p>AI, ML, NumPy, Pandas, Matplotlib</p>
+                </div>
+
+                <div class="skill-card-back">
+                    <h3>AI &amp; Machine Learning</h3>
+                    <ul>
+                        <li>Artificial Intelligence</li>
+                        <li>Machine Learning</li>
+                        <li>NumPy</li>
+                        <li>Pandas</li>
+                        <li>Matplotlib</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- UI/UX -->
+        <div class="skill-card">
+            <div class="skill-card-inner">
+
+                <div class="skill-card-front">
+                    <i class="fas fa-pen-ruler"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Design, Wireframing &amp; Prototyping</p>
+                </div>
+
+                <div class="skill-card-back">
+                    <h3>UI/UX Design</h3>
+                    <ul>
+                        <li>UI/UX Design</li>
+                        <li>Wireframing</li>
+                        <li>Prototyping</li>
+                        <li>Usability Testing</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Core Strengths -->
+        <div class="skill-card">
+            <div class="skill-card-inner">
+
+                <div class="skill-card-front">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Core Strengths</h3>
+                    <p>Problem Solving &amp; Technical Development</p>
+                </div>
+
+                <div class="skill-card-back">
+                    <h3>Core Strengths</h3>
+                    <ul>
+                        <li>Problem Solving</li>
+                        <li>Hardware-Software Integration</li>
+                        <li>Rapid Learning</li>
+                        <li>Team Collaboration</li>
+                        <li>Technical Project Development</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Development Tools -->
+        <div class="skill-card">
+            <div class="skill-card-inner">
+
+                <div class="skill-card-front">
+                    <i class="fas fa-tools"></i>
+                    <h3>Development Tools</h3>
+                    <p>Git, GitHub, Arduino IDE, Jupyter</p>
+                </div>
+
+                <div class="skill-card-back">
+                    <h3>Development Tools</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Arduino IDE</li>
+                        <li>Jupyter Notebook</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ==================== CONTACT SECTION ==================== -->
+    
+<!-- ==================== CONTACT SECTION ==================== -->
+<section id="contact" class="section">
+    <div class="section-title">
+        <h2>Get In <span class="gradient-text">Touch</span></h2>
+        <p>Let's connect and build something meaningful together.</p>
+    </div>
+
+    <div class="contact-container">
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>Email</h3>
+                    <a href="mailto:rushikeshgame951@gmail.com">
+                        rushikeshgame951@gmail.com
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>Phone</h3>
+                    <a href="tel:+919518329296">
+                        +91 95183 29296
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-location-dot"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>Location</h3>
+                    <p>Ahilyanagar, Maharashtra, India</p>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="contact-social">
+                <a href="https://github.com/RushikeshGame"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/rushikesh-game-b11bab313"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="mailto:rushikeshgame951@gmail.com"
+                   aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+
+            <form id="contactForm">
+
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="Enter subject"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Write your message..."
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="cta-button">
+                    Send Message
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+            Rushikesh<span>.dev</span>
+        </div>
+
+        <p>
+            Designing, developing and learning with passion.
         </p>
 
+        <div class="footer-social">
 
-        <div style="text-align:center;">
-
-            <a href="resume.pdf"
+            <a href="https://github.com/RushikeshGame"
                target="_blank"
-               class="cta-button">
+               rel="noopener noreferrer"
+               aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
 
-                <i class="fa-solid fa-file-pdf"></i>
+            <a href="https://www.linkedin.com/in/rushikesh-game-b11bab313"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
 
-                View Resume
-
+            <a href="mailto:rushikeshgame951@gmail.com"
+               aria-label="Email">
+                <i class="fas fa-envelope"></i>
             </a>
 
         </div>
 
-    </section>
-
-
-
-    <!-- ================= CONTACT ================= -->
-
-    <section id="contact">
-
-        <h2>
-            Contact Me
-        </h2>
-
-        <p class="section-subtitle">
-
-            Let's connect and explore opportunities.
-
+        <p class="copyright">
+            Designed &amp; Built by Rushikesh Game &copy; 2026
         </p>
 
+    </div>
 
-        <div class="about-container">
+</footer>
 
 
-            <!-- Email -->
+<!-- ==================== SCRIPTS ==================== -->
 
-            <div class="principle-card">
+<!-- Vanilla Tilt -->
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js">
+</script>
 
-                <div class="principle-icon">
-
-                    <i class="fa-solid fa-envelope"></i>
-
-                </div>
-
-
-                <div class="principle-text">
-
-                    <h4>
-                        Email
-                    </h4>
-
-                    <p>
-
-                        <a href="mailto:rushikeshgame951@gmail.com">
-
-                            rushikeshgame951@gmail.com
-
-                        </a>
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- Phone -->
-
-            <div class="principle-card">
-
-                <div class="principle-icon">
-
-                    <i class="fa-solid fa-phone"></i>
-
-                </div>
-
-
-                <div class="principle-text">
-
-                    <h4>
-                        Phone
-                    </h4>
-
-                    <p>
-                        +91 95183 29296
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- LinkedIn -->
-
-            <div class="principle-card">
-
-                <div class="principle-icon">
-
-                    <i class="fa-brands fa-linkedin"></i>
-
-                </div>
-
-
-                <div class="principle-text">
-
-                    <h4>
-                        LinkedIn
-                    </h4>
-
-                    <p>
-
-                        <a href="https://www.linkedin.com/in/rushikesh-game-b11bab313"
-                           target="_blank">
-
-                            View LinkedIn Profile
-
-                        </a>
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- GitHub -->
-
-            <div class="principle-card">
-
-                <div class="principle-icon">
-
-                    <i class="fa-brands fa-github"></i>
-
-                </div>
-
-
-                <div class="principle-text">
-
-                    <h4>
-                        GitHub
-                    </h4>
-
-                    <p>
-
-                        <a href="https://github.com/RushikeshGame"
-                           target="_blank">
-
-                            github.com/RushikeshGame
-
-                        </a>
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        <p>
-
-            © 2026 Rushikesh Game.
-            All Rights Reserved.
-
-        </p>
-
-
-        <p>
-
-            Electronics & Telecommunication
-            Engineering Student
-
-        </p>
-
-    </footer>
-
-
-
-    <!-- ================= JAVASCRIPT ================= -->
-
-    <script src="script.js"></script>
-
+<!-- Main JavaScript -->
+<script src="script.js"></script>
 
 </body>
-
 </html>
+    
