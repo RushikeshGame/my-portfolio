@@ -1417,4 +1417,26 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     }
            }
-    
+    #skills .skill-card-front .devicon-python-plain.colored {
+    color: #3776AB;
+}
+
+#skills .skill-card-front .devicon-java-plain.colored {
+    color: #ED8B00;
+}
+
+#skills .skill-card-front .devicon-c-plain.colored {
+    color: #A8B9CC;
+}
+
+#skills .skill-card-front .devicon-cplusplus-plain.colored {
+    color: #00599C;
+}
+
+#skills .skill-card-front .devicon-git-plain.colored {
+    color: #F05032;
+}
+
+#skills .skill-card-front .devicon-pandas-original.colored {
+    color: #150458;
+}
