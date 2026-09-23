@@ -1440,3 +1440,28 @@ footer {
 #skills .skill-card-front .devicon-pandas-original.colored {
     color: #150458;
 }
+/* Colorful Skill Icons */
+
+#skills .skills-grid .skill-card:nth-child(5) .skill-card-front i {
+    color: #00e5ff !important;
+}
+
+#skills .skills-grid .skill-card:nth-child(6) .skill-card-front i {
+    color: #2196f3 !important;
+}
+
+#skills .skills-grid .skill-card:nth-child(7) .skill-card-front i {
+    color: #9c27b0 !important;
+}
+
+#skills .skills-grid .skill-card:nth-child(8) .skill-card-front i {
+    color: #00c853 !important;
+}
+
+#skills .skills-grid .skill-card:nth-child(9) .skill-card-front i {
+    color: #ff9800 !important;
+}
+
+#skills .skills-grid .skill-card:nth-child(11) .skill-card-front i {
+    color: #e91e63 !important;
+}
