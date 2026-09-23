@@ -1465,3 +1465,57 @@ footer {
 #skills .skills-grid .skill-card:nth-child(11) .skill-card-front i {
     color: #e91e63 !important;
 }
+/* Colorful Skill Icons */
+
+#skills .skills-grid .skill-card:nth-child(5) .skill-card-front i {
+    color: #00e5ff !important;
+}
+
+#skills .skills-grid .skill-card:nth-child(6) .skill-card-front i {
+    color: #2196f3 !important;
+}
+
+#skills .skills-grid .skill-card:nth-child(7) .skill-card-front i {
+    color: #9c27b0 !important;
+}
+
+#skills .skills-grid .skill-card:nth-child(8) .skill-card-front i {
+    color: #00c853 !important;
+}
+
+#skills .skills-grid .skill-card:nth-child(9) .skill-card-front i {
+    color: #ff9800 !important;
+}
+
+#skills .skills-grid .skill-card:nth-child(11) .skill-card-front i {
+    color: #e91e63 !important;
+}
+/* Colorful Project Technology Icons */
+
+.project-tech-list i {
+    filter: none !important;
+}
+
+.project-tech-list .devicon-arduino-plain {
+    color: #00979D !important;
+}
+
+.project-tech-list .devicon-cplusplus-plain {
+    color: #00599C !important;
+}
+
+.project-tech-list .devicon-java-plain {
+    color: #ED8B00 !important;
+}
+
+.project-tech-list .fa-microchip {
+    color: #00e5ff !important;
+}
+
+.project-tech-list .fa-wifi {
+    color: #2196f3 !important;
+}
+
+.project-tech-list .fa-database {
+    color: #336791 !important;
+}
