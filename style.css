@@ -1519,3 +1519,38 @@ footer {
 .project-tech-list .fa-database {
     color: #336791 !important;
 }
+/* Project Tool Icons - Color */
+
+.project-tech-list i {
+    opacity: 1 !important;
+}
+
+/* Arduino */
+.project-tech-list .devicon-arduino-plain {
+    color: #00979D !important;
+}
+
+/* Java */
+.project-tech-list .devicon-java-plain {
+    color: #ED8B00 !important;
+}
+
+/* C++ */
+.project-tech-list .devicon-cplusplus-plain {
+    color: #00599C !important;
+}
+
+/* HTML */
+.project-tech-list .devicon-html5-plain {
+    color: #E34F26 !important;
+}
+
+/* CSS */
+.project-tech-list .devicon-css3-plain {
+    color: #1572B6 !important;
+}
+
+/* JavaScript */
+.project-tech-list .devicon-javascript-plain {
+    color: #F7DF1E !important;
+}
