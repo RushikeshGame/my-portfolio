@@ -1,530 +1,246 @@
-/* =========================================================
-   RUSHIKESH GAME - PORTFOLIO
-   Main JavaScript
-   ========================================================= */
+document.addEventListener('DOMContentLoaded', () => {
 
-document.addEventListener("DOMContentLoaded", () => {
-
-    /* =====================================================
-       CUSTOM CURSOR
-       ===================================================== */
-
+    // --- Animated Cursor ---
     const cursorDot = document.querySelector("[data-cursor-dot]");
     const cursorOutline = document.querySelector("[data-cursor-outline]");
 
-    if (cursorDot && cursorOutline) {
+    window.addEventListener("mousemove", (e) => {
+        const posX = e.clientX;
+        const posY = e.clientY;
+        cursorDot.style.left = `${posX}px`;
+        cursorDot.style.top = `${posY}px`;
+        cursorOutline.animate({
+            left: `${posX}px`,
+            top: `${posY}px`
+        }, { duration: 500, fill: "forwards" });
+    });
 
-        window.addEventListener("mousemove", (e) => {
-
-            const posX = e.clientX;
-            const posY = e.clientY;
-
-            cursorDot.style.left = `${posX}px`;
-            cursorDot.style.top = `${posY}px`;
-
-            cursorOutline.animate(
-                {
-                    left: `${posX}px`,
-                    top: `${posY}px`
-                },
-                {
-                    duration: 400,
-                    fill: "forwards"
-                }
-            );
-        });
-
-    }
-
-
-    /* =====================================================
-       TYPING ANIMATION
-       ===================================================== */
-
-    const typingText = document.querySelector(".typing-text");
-
+    // --- Typing Animation ---
     const roles = [
-        "Aspiring Electronics & Embedded Systems Engineer",
+        "Electronics and Telecommunication student",
         "Aspiring Embedded Systems Developer",
         "Aspiring Software Developer",
         "Aspiring VLSI Design Engineer"
     ];
 
     let roleIndex = 0;
-    let characterIndex = 0;
-    let deleting = false;
+    let charIndex = 0;
+    const typingTextElement = document.querySelector('.typing-text');
 
-    function typeRole() {
-
-        if (!typingText) {
-            return;
+    if (typingTextElement) {
+        function type() {
+            if (charIndex < roles[roleIndex].length) {
+                typingTextElement.textContent += roles[roleIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 100);
+            } else {
+                setTimeout(erase, 2000);
+            }
         }
 
-        const currentRole = roles[roleIndex];
+        function erase() {
+            if (charIndex > 0) {
+                typingTextElement.textContent = roles[roleIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, 50);
+            } else {
+                roleIndex = (roleIndex + 1) % roles.length;
+                setTimeout(type, 500);
+            }
+        }
 
-        if (!deleting) {
+        type();
+    }
 
-            typingText.textContent =
-                currentRole.substring(0, characterIndex + 1);
+    // --- Active Nav Link on Scroll ---
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
 
-            characterIndex++;
+    window.addEventListener('scroll', () => {
+        let current = '';
 
-            if (characterIndex === currentRole.length) {
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
 
-                deleting = true;
+            if (window.pageYOffset >= sectionTop - 150) {
+                current = section.getAttribute('id');
+            }
+        });
 
-                setTimeout(typeRole, 1800);
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+
+            if (link.getAttribute('href') && link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    // --- NEW: Manually Set Coding Stats ---
+    function setStaticStats() {
+        // --- UPDATE YOUR STATS HERE ---
+        const stats = {
+            leetcode: 319,
+            gfg: 271,
+            hackerrank: 25,
+            codechef: 56
+        };
+        // ------------------------------
+
+        document.getElementById('leetcode-solved').textContent = stats.leetcode;
+        document.getElementById('gfg-solved').textContent = stats.gfg;
+        document.getElementById('hackerrank-badges').textContent = stats.hackerrank;
+        document.getElementById('codechef-solved').textContent = stats.codechef;
+
+        const totalProblems = stats.leetcode + stats.gfg + stats.codechef;
+        const totalCounter = document.getElementById('total-solved-count');
+        totalCounter.setAttribute('data-goal', totalProblems);
+    }
+
+    let counterAnimated = false;
+
+    function animateCounter(element, duration = 2000) {
+        const goal = parseInt(element.getAttribute('data-goal'), 10);
+
+        if (counterAnimated || isNaN(goal) || goal === 0) return;
+
+        counterAnimated = true;
+        const startTime = performance.now();
+
+        function updateCounter(currentTime) {
+            const elapsedTime = currentTime - startTime;
+
+            if (elapsedTime > duration) {
+                element.textContent = goal;
                 return;
             }
 
-        } else {
+            const progress = elapsedTime / duration;
+            const currentCount = Math.floor(progress * goal);
 
-            typingText.textContent =
-                currentRole.substring(0, characterIndex - 1);
-
-            characterIndex--;
-
-            if (characterIndex === 0) {
-
-                deleting = false;
-
-                roleIndex++;
-
-                if (roleIndex >= roles.length) {
-                    roleIndex = 0;
-                }
-
-            }
+            element.textContent = currentCount;
+            requestAnimationFrame(updateCounter);
         }
 
-        setTimeout(
-            typeRole,
-            deleting ? 45 : 80
-        );
+        requestAnimationFrame(updateCounter);
     }
 
-    typeRole();
-
-
-    /* =====================================================
-       ACTIVE NAVIGATION LINK
-       ===================================================== */
-
-    const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll("nav ul li a");
-
-    function updateActiveNav() {
-
-        let currentSection = "";
-
-        sections.forEach((section) => {
-
-            const sectionTop = section.offsetTop - 180;
-            const sectionHeight = section.offsetHeight;
-
-            if (
-                window.scrollY >= sectionTop &&
-                window.scrollY < sectionTop + sectionHeight
-            ) {
-                currentSection = section.getAttribute("id");
-            }
-
-        });
-
-        navLinks.forEach((link) => {
-
-            link.classList.remove("active");
-
-            const href = link.getAttribute("href");
-
-            if (href === `#${currentSection}`) {
-                link.classList.add("active");
-            }
-
-        });
-    }
-
-    window.addEventListener("scroll", updateActiveNav);
-
-    updateActiveNav();
-
-
-    /* =====================================================
-       SMOOTH NAVIGATION
-       ===================================================== */
-
-    navLinks.forEach((link) => {
-
-        link.addEventListener("click", (e) => {
-
-            const targetId =
-                link.getAttribute("href");
-
-            if (
-                targetId &&
-                targetId.startsWith("#")
-            ) {
-
-                const target =
-                    document.querySelector(targetId);
-
-                if (target) {
-
-                    e.preventDefault();
-
-                    target.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                    });
-                }
-            }
-
-        });
-
-    });
-
-
-    /* =====================================================
-       SKILL CARD TOUCH / CLICK FLIP
-       ===================================================== */
-
-    const skillCards =
-        document.querySelectorAll(".skill-card");
-
-    skillCards.forEach((card) => {
-
-        card.addEventListener("click", () => {
-
-            card.classList.toggle("flipped");
-
-        });
-
-    });
-
-
-    /* =====================================================
-       CERTIFICATE CARD TOUCH / CLICK FLIP
-       ===================================================== */
-
-    const certificateCards =
-        document.querySelectorAll(".certificate-card");
-
-    certificateCards.forEach((card) => {
-
-        card.addEventListener("click", () => {
-
-            card.classList.toggle("flipped");
-
-        });
-
-    });
-
-
-    /* =====================================================
-       CERTIFICATE CAROUSEL
-       ===================================================== */
-
-    const certificateTrack =
-        document.querySelector(".certificate-track");
-
-    const certificateItems =
-        document.querySelectorAll(".certificate-card");
-
-    const nextButton =
-        document.querySelector(".carousel-btn.next");
-
-    const previousButton =
-        document.querySelector(".carousel-btn.prev");
-
-    const dotsContainer =
-        document.querySelector(".carousel-dots");
-
-    let certificateIndex = 0;
-
-
-    function getVisibleCertificates() {
-
-        if (window.innerWidth <= 600) {
-            return 1;
-        }
-
-        if (window.innerWidth <= 992) {
-            return 2;
-        }
-
-        return 3;
-    }
-
-
-    function updateCertificateCarousel() {
-
-        if (!certificateTrack || certificateItems.length === 0) {
-            return;
-        }
-
-        const visible =
-            getVisibleCertificates();
-
-        const maxIndex =
-            Math.max(
-                0,
-                certificateItems.length - visible
-            );
-
-        if (certificateIndex > maxIndex) {
-            certificateIndex = maxIndex;
-        }
-
-        const cardWidth =
-            certificateItems[0].getBoundingClientRect().width;
-
-        const gap = 25;
-
-        certificateTrack.style.transform =
-            `translateX(-${certificateIndex * (cardWidth + gap)}px)`;
-
-        updateCarouselDots();
-    }
-
-
-    function createCarouselDots() {
-
-        if (!dotsContainer) {
-            return;
-        }
-
-        dotsContainer.innerHTML = "";
-
-        const visible =
-            getVisibleCertificates();
-
-        const totalDots =
-            Math.max(
-                1,
-                certificateItems.length - visible + 1
-            );
-
-        for (let i = 0; i < totalDots; i++) {
-
-            const dot =
-                document.createElement("span");
-
-            dot.classList.add("carousel-dot");
-
-            if (i === certificateIndex) {
-                dot.classList.add("active");
-            }
-
-            dot.addEventListener("click", () => {
-
-                certificateIndex = i;
-
-                updateCertificateCarousel();
-
-            });
-
+    // --- Certificate Carousel & Dots Navigation ---
+    const container = document.querySelector('.certificate-container');
+    const cards = document.querySelectorAll('.certificate-card');
+    const dotsContainer = document.querySelector('.scroll-dots');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    if (container && cards.length > 0 && dotsContainer && prevBtn && nextBtn) {
+        let currentIndex = 0;
+
+        dotsContainer.innerHTML = '';
+
+        const dotTargetIndices = [
+            0,
+            Math.floor((cards.length - 1) / 2),
+            cards.length - 1
+        ];
+
+        for (let i = 0; i < 3; i++) {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
             dotsContainer.appendChild(dot);
         }
-    }
 
-
-    function updateCarouselDots() {
-
-        if (!dotsContainer) {
-            return;
-        }
-
-        const dots =
-            dotsContainer.querySelectorAll(".carousel-dot");
+        const dots = document.querySelectorAll('.dot');
 
         dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                const targetCardIndex = dotTargetIndices[index];
 
-            dot.classList.toggle(
-                "active",
-                index === certificateIndex
+                cards[targetCardIndex].scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            });
+        });
+
+        const updateCarouselUI = (newIndex) => {
+            currentIndex = newIndex;
+
+            const totalCards = cards.length;
+            let activeDotIndex;
+
+            if (currentIndex < totalCards / 3) {
+                activeDotIndex = 0;
+            } else if (currentIndex < (2 * totalCards) / 3) {
+                activeDotIndex = 1;
+            } else {
+                activeDotIndex = 2;
+            }
+
+            dots.forEach((d, i) =>
+                d.classList.toggle('active', i === activeDotIndex)
             );
 
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex === totalCards - 1;
+        };
+
+        nextBtn.addEventListener('click', () => {
+            const cardWidth = cards[0].offsetWidth;
+            const gap = parseFloat(window.getComputedStyle(container).gap);
+
+            container.scrollBy({
+                left: cardWidth + gap,
+                behavior: 'smooth'
+            });
         });
+
+        prevBtn.addEventListener('click', () => {
+            const cardWidth = cards[0].offsetWidth;
+            const gap = parseFloat(window.getComputedStyle(container).gap);
+
+            container.scrollBy({
+                left: -(cardWidth + gap),
+                behavior: 'smooth'
+            });
+        });
+
+        const carouselObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const index = Array.from(cards).indexOf(entry.target);
+                    updateCarouselUI(index);
+                }
+            });
+        }, {
+            root: container,
+            threshold: 0.7
+        });
+
+        cards.forEach(card => carouselObserver.observe(card));
+
+        updateCarouselUI(0);
     }
 
+    // --- Unified Intersection Observer for All Scroll Animations ---
+    const animationObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
 
-    if (nextButton) {
-
-        nextButton.addEventListener("click", () => {
-
-            const visible =
-                getVisibleCertificates();
-
-            const maxIndex =
-                Math.max(
-                    0,
-                    certificateItems.length - visible
-                );
-
-            if (certificateIndex < maxIndex) {
-                certificateIndex++;
-            } else {
-                certificateIndex = 0;
+                if (entry.target.id === 'coding-profiles') {
+                    animateCounter(document.getElementById('total-solved-count'));
+                }
             }
-
-            updateCertificateCarousel();
-
         });
-
-    }
-
-
-    if (previousButton) {
-
-        previousButton.addEventListener("click", () => {
-
-            const visible =
-                getVisibleCertificates();
-
-            const maxIndex =
-                Math.max(
-                    0,
-                    certificateItems.length - visible
-                );
-
-            if (certificateIndex > 0) {
-                certificateIndex--;
-            } else {
-                certificateIndex = maxIndex;
-            }
-
-            updateCertificateCarousel();
-
-        });
-
-    }
-
-
-    createCarouselDots();
-    updateCertificateCarousel();
-
-
-    window.addEventListener("resize", () => {
-
-        createCarouselDots();
-        updateCertificateCarousel();
-
+    }, {
+        threshold: 0.1
     });
 
+    const hiddenElements = document.querySelectorAll('.hidden');
 
-    /* =====================================================
-       SCROLL REVEAL ANIMATION
-       ===================================================== */
+    hiddenElements.forEach(el => animationObserver.observe(el));
 
-    const hiddenElements =
-        document.querySelectorAll(".hidden");
-
-    const observer =
-        new IntersectionObserver(
-            (entries) => {
-
-                entries.forEach((entry) => {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add("show");
-
-                    }
-
-                });
-
-            },
-            {
-                threshold: 0.15
-            }
-        );
-
-
-    hiddenElements.forEach((element) => {
-
-        observer.observe(element);
-
-    });
-
-
-    /* =====================================================
-       CONTACT FORM
-       ===================================================== */
-
-    const contactForm =
-        document.getElementById("contactForm");
-
-    if (contactForm) {
-
-        contactForm.addEventListener("submit", (e) => {
-
-            e.preventDefault();
-
-            const name =
-                document.getElementById("name")?.value.trim();
-
-            const email =
-                document.getElementById("email")?.value.trim();
-
-            const subject =
-                document.getElementById("subject")?.value.trim();
-
-            const message =
-                document.getElementById("message")?.value.trim();
-
-
-            if (
-                !name ||
-                !email ||
-                !subject ||
-                !message
-            ) {
-
-                alert("Please fill in all fields.");
-
-                return;
-            }
-
-
-            const mailSubject =
-                encodeURIComponent(subject);
-
-            const mailBody =
-                encodeURIComponent(
-                    `Name: ${name}\n\n` +
-                    `Email: ${email}\n\n` +
-                    `Message:\n${message}`
-                );
-
-
-            window.location.href =
-                `mailto:rushikeshgame951@gmail.com` +
-                `?subject=${mailSubject}` +
-                `&body=${mailBody}`;
-
-        });
-
-    }
-
-
-    /* =====================================================
-       VANILLA TILT
-       ===================================================== */
-
-    if (typeof VanillaTilt !== "undefined") {
-
-        VanillaTilt.init(
-            document.querySelectorAll(
-                ".project-card, .principle-card"
-            ),
-            {
-                max: 8,
-                speed: 400,
-                glare: true,
-                "max-glare": 0.15
-            }
-        );
-
-    }
-
+    // --- INITIATE STATS DISPLAY ---
+    setStaticStats();
 });
