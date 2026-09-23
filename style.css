@@ -1440,117 +1440,46 @@ footer {
 #skills .skill-card-front .devicon-pandas-original.colored {
     color: #150458;
 }
-/* Colorful Skill Icons */
-
-#skills .skills-grid .skill-card:nth-child(5) .skill-card-front i {
-    color: #00e5ff !important;
-}
-
-#skills .skills-grid .skill-card:nth-child(6) .skill-card-front i {
-    color: #2196f3 !important;
-}
-
-#skills .skills-grid .skill-card:nth-child(7) .skill-card-front i {
-    color: #9c27b0 !important;
-}
-
-#skills .skills-grid .skill-card:nth-child(8) .skill-card-front i {
-    color: #00c853 !important;
-}
-
-#skills .skills-grid .skill-card:nth-child(9) .skill-card-front i {
-    color: #ff9800 !important;
-}
-
-#skills .skills-grid .skill-card:nth-child(11) .skill-card-front i {
-    color: #e91e63 !important;
-}
-/* Colorful Skill Icons */
-
-#skills .skills-grid .skill-card:nth-child(5) .skill-card-front i {
-    color: #00e5ff !important;
-}
-
-#skills .skills-grid .skill-card:nth-child(6) .skill-card-front i {
-    color: #2196f3 !important;
-}
-
-#skills .skills-grid .skill-card:nth-child(7) .skill-card-front i {
-    color: #9c27b0 !important;
-}
-
-#skills .skills-grid .skill-card:nth-child(8) .skill-card-front i {
-    color: #00c853 !important;
-}
-
-#skills .skills-grid .skill-card:nth-child(9) .skill-card-front i {
-    color: #ff9800 !important;
-}
-
-#skills .skills-grid .skill-card:nth-child(11) .skill-card-front i {
-    color: #e91e63 !important;
-}
-/* Colorful Project Technology Icons */
-
-.project-tech-list i {
-    filter: none !important;
-}
-
-.project-tech-list .devicon-arduino-plain {
-    color: #00979D !important;
-}
-
-.project-tech-list .devicon-cplusplus-plain {
-    color: #00599C !important;
-}
-
-.project-tech-list .devicon-java-plain {
-    color: #ED8B00 !important;
-}
-
-.project-tech-list .fa-microchip {
-    color: #00e5ff !important;
-}
-
-.project-tech-list .fa-wifi {
-    color: #2196f3 !important;
-}
-
-.project-tech-list .fa-database {
-    color: #336791 !important;
-}
-/* Project Tool Icons - Color */
+/* Project Tool Icons - Final */
 
 .project-tech-list i {
     opacity: 1 !important;
+    filter: none !important;
 }
 
-/* Arduino */
-.project-tech-list .devicon-arduino-plain {
-    color: #00979D !important;
+/* Car Speed Detection System */
+.project-card:nth-child(1) .project-tech-list li:nth-child(1) i {
+    color: #00A4EF !important;
 }
 
-/* Java */
-.project-tech-list .devicon-java-plain {
+.project-card:nth-child(1) .project-tech-list li:nth-child(2) i {
+    color: #FF9800 !important;
+}
+
+.project-card:nth-child(1) .project-tech-list li:nth-child(3) i {
+    color: #00E5FF !important;
+}
+
+
+/* Water Level Monitoring System */
+.project-card:nth-child(2) .project-tech-list li:nth-child(1) i {
+    color: #2196F3 !important;
+}
+
+.project-card:nth-child(2) .project-tech-list li:nth-child(2) i {
+    color: #00E5FF !important;
+}
+
+.project-card:nth-child(2) .project-tech-list li:nth-child(3) i {
+    color: #FF9800 !important;
+}
+
+
+/* Inventory Management System */
+.project-card:nth-child(3) .project-tech-list li:nth-child(1) i {
     color: #ED8B00 !important;
 }
 
-/* C++ */
-.project-tech-list .devicon-cplusplus-plain {
-    color: #00599C !important;
-}
-
-/* HTML */
-.project-tech-list .devicon-html5-plain {
-    color: #E34F26 !important;
-}
-
-/* CSS */
-.project-tech-list .devicon-css3-plain {
-    color: #1572B6 !important;
-}
-
-/* JavaScript */
-.project-tech-list .devicon-javascript-plain {
-    color: #F7DF1E !important;
+.project-card:nth-child(3) .project-tech-list li:nth-child(2) i {
+    color: #007396 !important;
 }
