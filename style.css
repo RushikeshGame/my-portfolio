@@ -1461,3 +1461,61 @@ footer {
 .project-card:nth-child(3) .project-tech-list li:nth-child(2) i {
     color: #007396 !important;
 }
+/* ================================================= */
+/* FINAL SKILL ICON COLORS */
+/* ================================================= */
+
+/* Python */
+#skills .skill-card:nth-child(1) .skill-card-front i {
+    color: #3776AB !important;
+}
+
+/* Java */
+#skills .skill-card:nth-child(2) .skill-card-front i {
+    color: #ED8B00 !important;
+}
+
+/* C */
+#skills .skill-card:nth-child(3) .skill-card-front i {
+    color: #A8B9CC !important;
+}
+
+/* C++ */
+#skills .skill-card:nth-child(4) .skill-card-front i {
+    color: #00599C !important;
+}
+
+/* Embedded Systems */
+#skills .skill-card:nth-child(5) .skill-card-front i {
+    color: #00E5FF !important;
+}
+
+/* IoT */
+#skills .skill-card:nth-child(6) .skill-card-front i {
+    color: #2196F3 !important;
+}
+
+/* VLSI Design */
+#skills .skill-card:nth-child(7) .skill-card-front i {
+    color: #9C27B0 !important;
+}
+
+/* Digital Electronics */
+#skills .skill-card:nth-child(8) .skill-card-front i {
+    color: #00C853 !important;
+}
+
+/* Artificial Intelligence */
+#skills .skill-card:nth-child(9) .skill-card-front i {
+    color: #FF9800 !important;
+}
+
+/* Git & GitHub */
+#skills .skill-card:nth-child(10) .skill-card-front i {
+    color: #F05032 !important;
+}
+
+/* UI/UX Design */
+#skills .skill-card:nth-child(11) .skill-card-front i {
+    color: #E91E63 !important;
+}
