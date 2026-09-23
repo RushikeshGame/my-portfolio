@@ -1483,3 +1483,30 @@ footer {
 .project-card:nth-child(3) .project-tech-list li:nth-child(2) i {
     color: #007396 !important;
 }
+/* ================================================= */
+/* FINAL SKILL ICON COLORS */
+/* ================================================= */
+
+#skills .skill-card-front i.devicon-python-plain.colored {
+    color: #3776AB !important;
+}
+
+#skills .skill-card-front i.devicon-java-plain.colored {
+    color: #ED8B00 !important;
+}
+
+#skills .skill-card-front i.devicon-c-plain.colored {
+    color: #A8B9CC !important;
+}
+
+#skills .skill-card-front i.devicon-cplusplus-plain.colored {
+    color: #00599C !important;
+}
+
+#skills .skill-card-front i.devicon-git-plain.colored {
+    color: #F05032 !important;
+}
+
+#skills .skill-card-front i.devicon-pandas-original.colored {
+    color: #150458 !important;
+}
